@@ -31,6 +31,7 @@ install:
     - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
     - "activate test"
     - pip install pydicom
+    - pip install nibabel
 
 build: false
 
