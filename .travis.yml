@@ -10,7 +10,7 @@ env:
     - SETUP_XVFB=True
     - CONDA_CHANNELS="conda-forge"
     - CONDA_DEPENDENCIES="glueviz pytest mock requests"
-    - PIP_DEPENDENCIES="pydicom"
+    - PIP_DEPENDENCIES="pydicom, nibabel"
   matrix:
     - PYTHON_VERSION=2.7
     - PYTHON_VERSION=3.5

@@ -29,5 +29,5 @@ setup(name='glue-medical',
       packages = find_packages(),
       package_data={},
       entry_points=entry_points,
-      install_requires=['numpy', 'glueviz', 'pydicom']
+      install_requires=['numpy', 'glueviz', 'pydicom', 'nibabel']
     )
