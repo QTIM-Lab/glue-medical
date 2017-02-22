@@ -2,8 +2,8 @@
 # be confusing anyway), we add an 'Import datasets as slices' plugin. In
 # future, this could be generalized to support other formats.
 
+from qtpy import QtWidgets
 from glue.config import importer
-from glue.external.qt import QtGui
 from glue.utils.qt import messagebox_on_error
 
 from .dicom_factory import dicom_reader
@@ -20,12 +20,12 @@ def import_dicom_directory_as_slices():
     caption = ('Select directory containing DICOM files to load as slices of a'
                'single array')
 
-    dialog = QtGui.QFileDialog(caption=caption)
-    dialog.setFileMode(QtGui.QFileDialog.Directory)
+    dialog = QtWidgets.QFileDialog(caption=caption)
+    dialog.setFileMode(QtWidgets.QFileDialog.Directory)
 
     directory = dialog.exec_()
 
-    if directory == QtGui.QDialog.Rejected:
+    if directory == QtWidgets.QDialog.Rejected:
         return []
 
     directory = dialog.selectedFiles()
